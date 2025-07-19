@@ -78,7 +78,7 @@ export default function Index() {
             
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none"
+              className="relative z-10 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none"
               onClick={() => window.open('https://t.me/maryhorarotvet', '_blank')}
             >
               <Icon name="MessageCircle" size={20} className="mr-2" />
