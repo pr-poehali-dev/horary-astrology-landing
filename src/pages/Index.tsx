@@ -38,7 +38,7 @@ export default function Index() {
     {
       icon: "Lock",
       title: "Без личных данных",
-      description: "Не нужен ни гороскоп, ни дата рождения"
+      description: "Не нужен ни гороскоп, ни дата рождения, только место и время самого вопроса"
     },
     {
       icon: "Globe",
