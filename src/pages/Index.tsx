@@ -11,12 +11,12 @@ export default function Index() {
       result: "Отпустила и встретила нового партнёра"
     },
     {
-      question: "Повышение на работе?",
+      question: "Получу ли я повышение на работе в ближайшее время?",
       answer: "Да, через 3 месяца",
       result: "Предложили новую должность точно в срок"
     },
     {
-      question: "Беременность в этом году?",
+      question: "Забеременею ли я в этом году?",
       answer: "Да, при медицинском вмешательстве",
       result: "Забеременела через 2 месяца после ЭКО"
     }
@@ -318,19 +318,7 @@ export default function Index() {
       <footer className="py-12 bg-slate-900 border-t border-purple-400/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Связь со мной</h3>
-              <div className="flex justify-center gap-6">
-                <Button variant="outline" size="sm" className="border-purple-400/30 text-purple-200">
-                  <Icon name="MessageCircle" size={16} className="mr-2" />
-                  Telegram
-                </Button>
-                <Button variant="outline" size="sm" className="border-purple-400/30 text-purple-200">
-                  <Icon name="Mail" size={16} className="mr-2" />
-                  Email
-                </Button>
-              </div>
-            </div>
+
             
             <div className="space-y-4 text-sm text-gray-400">
               <p>Политика конфиденциальности</p>
