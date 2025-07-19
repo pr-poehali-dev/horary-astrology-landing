@@ -100,9 +100,8 @@ export default function StarMap() {
 
   const drawStar = (ctx: CanvasRenderingContext2D, star: Star, time: number, mouseDistance: number) => {
     const twinkle = Math.sin(time * star.twinkleSpeed) * 0.3 + 0.7;
-    const baseGlow = Math.sin(time * star.twinkleSpeed * 0.5) * 0.2 + 0.8;
     const proximityGlow = Math.max(0, 1 - mouseDistance / 100);
-    const alpha = star.brightness * twinkle * baseGlow + proximityGlow * 0.3;
+    const alpha = star.brightness * twinkle + proximityGlow * 0.3;
     
     ctx.save();
     ctx.globalAlpha = alpha;
@@ -118,19 +117,12 @@ export default function StarMap() {
     ctx.arc(star.x, star.y, star.size * (1 + proximityGlow * 0.5), 0, Math.PI * 2);
     ctx.fill();
     
-    // Эффект постоянного сияния
-    ctx.globalAlpha = baseGlow * 0.3 + proximityGlow * 0.5;
-    ctx.fillStyle = star.constellation ? '#fbbf24' : '#e5deff';
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.size * (2 + baseGlow), 0, Math.PI * 2);
-    ctx.fill();
-    
-    // Дополнительное свечение при наведении
+    // Эффект мерцания
     if (proximityGlow > 0.1) {
-      ctx.globalAlpha = proximityGlow * 0.4;
+      ctx.globalAlpha = proximityGlow * 0.5;
       ctx.fillStyle = '#fbbf24';
       ctx.beginPath();
-      ctx.arc(star.x, star.y, star.size * 4, 0, Math.PI * 2);
+      ctx.arc(star.x, star.y, star.size * 3, 0, Math.PI * 2);
       ctx.fill();
     }
     
