@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import StarMap from '@/components/StarMap';
 
 export default function Index() {
   const testimonials = [
@@ -56,7 +57,7 @@ export default function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
         <div className="absolute inset-0">
-          <div className="stars absolute inset-0 opacity-50"></div>
+          <StarMap />
         </div>
         
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
@@ -331,24 +332,7 @@ export default function Index() {
         </div>
       </footer>
 
-      <style jsx>{`
-        .stars {
-          background-image: 
-            radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-            radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
-            radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-            radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
-            radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
-          background-repeat: repeat;
-          background-size: 200px 100px;
-          animation: stars-move 20s linear infinite;
-        }
-        
-        @keyframes stars-move {
-          from { transform: translateY(0px); }
-          to { transform: translateY(-100px); }
-        }
-      `}</style>
+
     </div>
   );
 }
