@@ -76,10 +76,10 @@ export default function Index() {
             
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none"
             >
               <Icon name="MessageCircle" size={20} className="mr-2" />
-              Получить экспресс-разбор в Telegram
+              Задать свой вопрос
             </Button>
           </div>
         </div>
@@ -192,9 +192,9 @@ export default function Index() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-sm sm:text-base py-2 sm:py-3">
                     <Icon name="MessageCircle" size={16} className="mr-2" />
-                    Получить сейчас
+                    Задать свой вопрос
                   </Button>
                 </CardFooter>
               </Card>
@@ -226,9 +226,9 @@ export default function Index() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-sm sm:text-base py-2 sm:py-3">
                     <Icon name="MessageCircle" size={16} className="mr-2" />
-                    Получить сейчас
+                    Задать свой вопрос
                   </Button>
                 </CardFooter>
               </Card>
@@ -304,11 +304,11 @@ export default function Index() {
             </h2>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none"
               onClick={() => window.open('http://t.me/maryhorarotvet', '_blank')}
             >
               <Icon name="MessageCircle" size={20} className="mr-2" />
-              Получить консультацию в Telegram
+              Задать свой вопрос
             </Button>
           </div>
         </div>
