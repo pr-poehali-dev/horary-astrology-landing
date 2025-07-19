@@ -3,23 +3,23 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import StarMap from '@/components/StarMap';
-import { AnimatedSection, StaggeredAnimation } from '@/hooks/useScrollAnimation';
+import { div, div } from '@/hooks/useScrollAnimation';
 
 export default function Index() {
   const testimonials = [
     {
       question: "Вернётся ли бывший?",
-      answer: "Нет",
+      answer: "Карта показала, что возвращение маловероятно. Астрологические показатели указывали на его окончательный уход и нежелание возобновлять связь.",
       result: "Отпустила и встретила нового партнёра"
     },
     {
       question: "Получу ли я повышение на работе в ближайшее время?",
-      answer: "Да, через 3 месяца",
+      answer: "Карта показала \"Да\", повышение будет через 3 месяца. При этом указывалось, что решение будет принято неожиданно, но потребуется проявить настойчивость в переговорах по условиям.",
       result: "Предложили новую должность точно в срок"
     },
     {
       question: "Забеременею ли я в этом году?",
-      answer: "Да, при медицинском вмешательстве",
+      answer: "Карта показала \"Да\", беременность наступит в ближайшие 2 месяца, но было указание на необходимость определенного медицинского вмешательства.",
       result: "Забеременела через 2 месяца после ЭКО"
     }
   ];
@@ -92,9 +92,9 @@ export default function Index() {
       <section className="py-20 bg-slate-900/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <AnimatedSection animation="fadeUp" className="grid md:grid-cols-2 gap-8 mb-12">
-              <StaggeredAnimation 
-                staggerDelay={150}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div 
+                
                 className="space-y-6"
               >
                 <blockquote className="text-xl italic text-purple-200 border-l-4 border-purple-400 pl-6">
@@ -103,9 +103,9 @@ export default function Index() {
                 <blockquote className="text-xl italic text-purple-200 border-l-4 border-purple-400 pl-6">
                   "Стоит ли увольняться и искать новую работу?"
                 </blockquote>
-              </StaggeredAnimation>
-              <StaggeredAnimation 
-                staggerDelay={150}
+              </div>
+              <div 
+                
                 className="space-y-6"
               >
                 <blockquote className="text-xl italic text-purple-200 border-l-4 border-purple-400 pl-6">
@@ -114,14 +114,14 @@ export default function Index() {
                 <blockquote className="text-xl italic text-purple-200 border-l-4 border-purple-400 pl-6">
                   "Что с моим ребёнком, который не выходит на связь?"
                 </blockquote>
-              </StaggeredAnimation>
-            </AnimatedSection>
+              </div>
+            </div>
             
-            <AnimatedSection animation="fadeUp" delay={600} className="text-center">
+            <div className="text-center">
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Вы ищете ответ, совет, поддержку — но получаете лишь догадки, обтекаемые рекомендации и ещё больше сомнений.
               </p>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
@@ -130,13 +130,13 @@ export default function Index() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <AnimatedSection animation="fadeUp">
+            <div >
               <h2 className="text-3xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
                 Что если бы можно было получить конкретный ответ прямо сейчас?
               </h2>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection animation="scale" delay={300} className="mb-12 relative">
+            <div className="mb-12 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20">
                 <Icon name="Compass" size={64} className="mx-auto mb-6 text-yellow-400" />
@@ -144,7 +144,7 @@ export default function Index() {
                   <span className="text-white font-semibold">Хорарная астрология</span> — древняя система, которая отвечает на любой важный вопрос, заданный в определённый момент времени. Вы получаете чёткий ответ: <span className="text-yellow-400">Да/Нет. Когда. Где. Почему.</span> И что делать.
                 </p>
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
@@ -153,16 +153,13 @@ export default function Index() {
       <section className="py-20 bg-slate-900/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <AnimatedSection animation="fadeUp">
+            <div >
               <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-white">
                 Как работает Хорар?
               </h2>
-            </AnimatedSection>
+            </div>
             
-            <StaggeredAnimation 
-              staggerDelay={200} 
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <Card key={index} className="bg-slate-800/50 backdrop-blur-sm border-purple-400/20 text-center hover:border-purple-400/40 transition-all duration-300">
                   <CardHeader>
@@ -174,7 +171,7 @@ export default function Index() {
                   </CardContent>
                 </Card>
               ))}
-            </StaggeredAnimation>
+            </div>
           </div>
         </div>
       </section>
@@ -183,16 +180,13 @@ export default function Index() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <AnimatedSection animation="fadeUp">
+            <div >
               <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-white">
                 Тарифы
               </h2>
-            </AnimatedSection>
+            </div>
             
-            <StaggeredAnimation 
-              staggerDelay={300}
-              className="grid md:grid-cols-2 gap-8"
-            >
+            <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-slate-800/50 backdrop-blur-sm border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Экспресс-Разбор</CardTitle>
@@ -259,7 +253,7 @@ export default function Index() {
                   </Button>
                 </CardFooter>
               </Card>
-            </StaggeredAnimation>
+            </div>
           </div>
         </div>
       </section>
@@ -268,20 +262,16 @@ export default function Index() {
       <section className="py-20 bg-slate-900/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <AnimatedSection animation="fadeUp">
+            <div >
               <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-white">
                 Примеры реальных историй
               </h2>
-            </AnimatedSection>
+            </div>
             
-            <StaggeredAnimation 
-              staggerDelay={250}
-              className="grid md:grid-cols-3 gap-8"
-            >
+            <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="bg-slate-800/50 backdrop-blur-sm border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
                   <CardHeader>
-                    <Icon name="Quote" size={32} className="text-purple-400 mb-2" />
                     <CardTitle className="text-lg text-purple-200">"{testimonial.question}"</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -296,7 +286,7 @@ export default function Index() {
                   </CardContent>
                 </Card>
               ))}
-            </StaggeredAnimation>
+            </div>
           </div>
         </div>
       </section>
@@ -305,26 +295,23 @@ export default function Index() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <AnimatedSection animation="fadeUp">
+            <div >
               <h2 className="text-3xl lg:text-4xl font-bold mb-16 text-white">
                 Вопросы, на которые отвечает Хорар
               </h2>
-            </AnimatedSection>
+            </div>
             
-            <StaggeredAnimation 
-              staggerDelay={100}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
-            >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areas.map((area, index) => (
                 <Badge 
                   key={index} 
                   variant="outline" 
-                  className="border-purple-400/30 text-purple-200 hover:bg-purple-600/20 p-3 text-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:border-purple-400/50"
+                  className="border-purple-400/30 text-purple-200 hover:bg-purple-600/20 p-4 text-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 hover:border-purple-400/50 text-lg font-semibold"
                 >
                   {area}
                 </Badge>
               ))}
-            </StaggeredAnimation>
+            </div>
           </div>
         </div>
       </section>
@@ -334,16 +321,16 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-indigo-900/30"></div>
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <AnimatedSection animation="scale">
+            <div>
               <Icon name="Stars" size={64} className="mx-auto mb-8 text-yellow-400" />
-            </AnimatedSection>
-            <AnimatedSection animation="fadeUp" delay={200}>
+            </div>
+            <div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
                 У вас есть вопрос.<br />
                 Хорар даст ответ.
               </h2>
-            </AnimatedSection>
-            <AnimatedSection animation="scale" delay={500}>
+            </div>
+            <div>
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full border border-purple-400/30 shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none"
@@ -352,7 +339,7 @@ export default function Index() {
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Задать свой вопрос
               </Button>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
