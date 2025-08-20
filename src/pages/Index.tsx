@@ -190,7 +190,7 @@ export default function Index() {
               <Card className="bg-slate-800/50 backdrop-blur-sm border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Экспресс-Разбор</CardTitle>
-                  <CardDescription className="text-3xl font-bold text-yellow-400">500₽</CardDescription>
+                  <CardDescription className="text-3xl font-bold text-yellow-400">1000₽</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-2 text-gray-300">
@@ -223,7 +223,7 @@ export default function Index() {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Полная Консультация</CardTitle>
-                  <CardDescription className="text-3xl font-bold text-yellow-400">2990₽</CardDescription>
+                  <CardDescription className="text-3xl font-bold text-yellow-400">4000₽</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-2 text-gray-300">
